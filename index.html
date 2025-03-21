@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki Mega Man X3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-content">
+        <h1>Mega Man X3</h1>
+        <ul>
+          <li><a href="#story">História</a></li>
+          <li><a href="#characters">Personagens</a></li>
+          <li><a href="#bosses">Chefes</a></li>
+          <li><a href="#weapons">Armas</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section id="hero">
+        <h1>Bem-vindo à Wiki do Mega Man X3</h1>
+        <p>Lançado em 1995, Mega Man X3 é o terceiro jogo da série Mega Man X</p>
+      </section>
+
+      <section id="story">
+        <h2>História</h2>
+        <p>Ambientado no ano 21XX, Dr. Doppler criou uma suposta cura para o comportamento Maverick nos Reploids. No entanto, suas verdadeiras intenções são reveladas quando seus seguidores se tornam Mavericks, e X deve mais uma vez lutar para proteger o mundo.</p>
+      </section>
+
+      <section id="characters">
+        <h2>Personagens Principais</h2>
+        <div class="character-grid">
+          <div class="character-card" id="mega-man-x">
+            <h3>Mega Man X</h3>
+            <p>O protagonista e um Caçador Maverick Classe B que luta pela paz entre humanos e Reploids.</p>
+          </div>
+          <div class="character-card" id="zero">
+            <h3>Zero</h3>
+            <p>Melhor amigo de X e também Caçador Maverick. Pela primeira vez na série, Zero é jogável em certas fases.</p>
+          </div>
+          <div class="character-card" id="dr-doppler">
+            <h3>Dr. Doppler</h3>
+            <p>Um cientista Reploid que criou uma suposta cura para o vírus Maverick.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="bosses">
+        <h2>Chefes Mavericks</h2>
+        <div class="boss-grid">
+          <div class="boss-card" onclick="showBossInfo('Blast Hornet')">Blast Hornet</div>
+          <div class="boss-card" onclick="showBossInfo('Blizzard Buffalo')">Blizzard Buffalo</div>
+          <div class="boss-card" onclick="showBossInfo('Gravity Beetle')">Gravity Beetle</div>
+          <div class="boss-card" onclick="showBossInfo('Toxic Seahorse')">Toxic Seahorse</div>
+          <div class="boss-card" onclick="showBossInfo('Volt Catfish')">Volt Catfish</div>
+          <div class="boss-card" onclick="showBossInfo('Crush Crawfish')">Crush Crawfish</div>
+          <div class="boss-card" onclick="showBossInfo('Tunnel Rhino')">Tunnel Rhino</div>
+          <div class="boss-card" onclick="showBossInfo('Neon Tiger')">Neon Tiger</div>
+        </div>
+        <div id="boss-info" class="boss-info"></div>
+      </section>
+
+      <section id="weapons">
+        <h2>Armas Especiais</h2>
+        <div class="weapons-list">
+          <ul>
+            <li>Bomba Parasita - Obtida do Blast Hornet</li>
+            <li>Escudo de Gelo - Obtida do Blizzard Buffalo</li>
+            <li>Poço Gravitacional - Obtida do Gravity Beetle</li>
+            <li>Explosão Ácida - Obtida do Toxic Seahorse</li>
+            <li>Trovão Tríade - Obtida do Volt Catfish</li>
+            <li>Lâmina Giratória - Obtida do Crush Crawfish</li>
+            <li>Presa Tornado - Obtida do Tunnel Rhino</li>
+            <li>Dispersor de Raios - Obtida do Neon Tiger</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Wiki Mega Man X3 - Conteúdo feito por fãs para fins educacionais</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
