@@ -87,3 +87,52 @@ sections.forEach(section => {
   section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(section);
 });
+
+// Configurações de acessibilidade
+document.addEventListener('DOMContentLoaded', () => {
+  const accessibilityToggle = document.getElementById('accessibility-toggle');
+  const accessibilityControls = document.getElementById('accessibility-controls');
+  const increaseFont = document.getElementById('increase-font');
+  const decreaseFont = document.getElementById('decrease-font');
+  const toggleTheme = document.getElementById('toggle-theme');
+
+  let fontSize = 16;
+  const fontSizeStep = 2;
+  const minFontSize = 12;
+  const maxFontSize = 24;
+
+  // Toggle menu de acessibilidade
+  accessibilityToggle.addEventListener('click', () => {
+    accessibilityControls.classList.toggle('hidden');
+  });
+
+  // Aumentar tamanho da fonte
+  increaseFont.addEventListener('click', () => {
+    if (fontSize < maxFontSize) {
+      fontSize += fontSizeStep;
+      document.body.style.fontSize = `${fontSize}px`;
+    }
+  });
+
+  // Diminuir tamanho da fonte
+  decreaseFont.addEventListener('click', () => {
+    if (fontSize > minFontSize) {
+      fontSize -= fontSizeStep;
+      document.body.style.fontSize = `${fontSize}px`;
+    }
+  });
+
+  // Alternar tema claro/escuro
+  toggleTheme.addEventListener('click', () => {
+    const root = document.documentElement;
+    const isLightTheme = root.getAttribute('data-theme') === 'light';
+    
+    if (isLightTheme) {
+      root.removeAttribute('data-theme');
+      toggleTheme.textContent = 'Tema Claro';
+    } else {
+      root.setAttribute('data-theme', 'light');
+      toggleTheme.textContent = 'Tema Escuro';
+    }
+  });
+});
